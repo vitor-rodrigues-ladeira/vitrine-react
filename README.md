@@ -10,11 +10,14 @@
         - [x] Nome
         - [x] Legenda
         - [x] Botão  clicável
-    - [ ] Mostrar para o Junior
+    - [x] Mostrar para o Junior
 - [ ] Chamar os componentes no App
     - [x] Importação da API do Clash Royale
     - [x] Estudar os endpoints
     - [x] Fazer autenticação da API
-    - [ ] Consumir os endpoints
+    - [ ] Colocar o get em uma função --> colocar um return data
+    - [ ] Fazer validação do data(em caso de undefined ou null)
+    - [ ] Rodar o map de data
+    - [ ] Passar as props para o componente
     - [ ] Testar
     - [ ] Mostrar para o Junior

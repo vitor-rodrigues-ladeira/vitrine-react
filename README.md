@@ -5,6 +5,7 @@
     - [x] Texto com chevron centralizado
     - [x] Mostrar para o Junior
 - [ ] Componente Card
+    - [ ] Estrutura HTML
     - [ ] Imagem
     - [ ] Nome
     - [ ] Legenda

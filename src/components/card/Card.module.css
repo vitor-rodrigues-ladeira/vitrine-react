@@ -1,0 +1,21 @@
+.cardBox{
+    display: flex;
+    flex-direction: column;
+    height: 15vh;
+    gap: 10px;
+}
+
+.cardBox p{
+    padding-inline: 1vw;
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-inline: 1vw;
+}
+
+.row img{
+    height: 5vh;
+}

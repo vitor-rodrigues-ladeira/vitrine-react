@@ -1,6 +1,7 @@
 import React from 'react'
-import './App.module.css'
+import styles from './App.module.css'
 import Header from './components/header/Header.jsx'
+import Card from './components/card/Card.jsx'
 
 
 function App() {
@@ -8,6 +9,11 @@ function App() {
   return (
     <div>
       <Header/>
+      <div className={styles.grid}>
+        <Card/>
+        <Card/>
+        <Card/>
+      </div>
     </div>
   )
 }

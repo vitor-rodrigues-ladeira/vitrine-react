@@ -6,15 +6,15 @@
     - [x] Mostrar para o Junior
 - [ ] Componente Card
     - [x] Estrutura HTML
-        - [ ] Imagem
-        - [ ] Nome
-        - [ ] Legenda
-        - [ ] Botão  clicável
+        - [x] Imagem
+        - [x] Nome
+        - [x] Legenda
+        - [x] Botão  clicável
     - [ ] Mostrar para o Junior
 - [ ] Chamar os componentes no App
-    - [ ] Importação da API do Clash Royale
-    - [ ] Estudar os endpoints
-    - [ ] Fazer autenticação da API
+    - [x] Importação da API do Clash Royale
+    - [x] Estudar os endpoints
+    - [x] Fazer autenticação da API
     - [ ] Consumir os endpoints
     - [ ] Testar
     - [ ] Mostrar para o Junior

@@ -5,11 +5,11 @@
     - [x] Texto com chevron centralizado
     - [x] Mostrar para o Junior
 - [ ] Componente Card
-    - [ ] Estrutura HTML
-    - [ ] Imagem
-    - [ ] Nome
-    - [ ] Legenda
-    - [ ] Botão  clicável
+    - [x] Estrutura HTML
+        - [ ] Imagem
+        - [ ] Nome
+        - [ ] Legenda
+        - [ ] Botão  clicável
     - [ ] Mostrar para o Junior
 - [ ] Chamar os componentes no App
     - [ ] Importação da API do Clash Royale

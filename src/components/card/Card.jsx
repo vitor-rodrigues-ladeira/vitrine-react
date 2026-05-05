@@ -10,6 +10,7 @@ export default function Card(){
                 <img src="elixir.jpg" alt="" />
                 <span>Raridade</span>       
             </ul>
+            <button className={styles.btn}>Veja mais</button>
         </div>
     )
 }

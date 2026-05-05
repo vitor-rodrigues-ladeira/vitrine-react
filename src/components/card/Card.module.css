@@ -19,3 +19,8 @@
 .row img{
     height: 5vh;
 }
+
+.btn{
+    width: 50%;
+    align-self: center;
+}

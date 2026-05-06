@@ -15,12 +15,12 @@
     - [x] Importação da API do Clash Royale
     - [x] Estudar os endpoints
     - [x] Fazer autenticação da API
+        - [x] Testar com useState
+            - [x] Mostrar para o Junior
+        - [x] Testar com useEffect
+            - [ ] Mostrar para o Junior
         - [ ] Rodar o map de data
             - [ ] Fazer validação do data(em caso de undefined ou null)
-            - [ ] Testar com useState
-                - [ ] Mostrar para o Junior
-            - [ ] Testar com useEffect
-                - [ ] Mostrar para o Junior
         - [ ] Passar as props para o componente Accordion
 - [ ] Chamar os componentes no App
 - [ ] Testar

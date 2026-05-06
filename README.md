@@ -18,7 +18,7 @@
         - [x] Testar com useState
             - [x] Mostrar para o Junior
         - [x] Testar com useEffect
-            - [ ] Mostrar para o Junior
+            - [x] Mostrar para o Junior
         - [ ] Rodar o map de data
             - [ ] Fazer validação do data(em caso de undefined ou null)
         - [ ] Passar as props para o componente Accordion

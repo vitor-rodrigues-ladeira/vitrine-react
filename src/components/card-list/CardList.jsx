@@ -35,7 +35,7 @@ export default function CardList() {
             })
             const data = await response.json()
             if (data) {
-                setContent(data.items)
+                setContent(data.item)
             }
         }
 

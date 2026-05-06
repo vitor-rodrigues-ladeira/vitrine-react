@@ -2,22 +2,27 @@
 - [x] Criar repositório git
 - [x] Estruturar pastas e remoção do template padrão do react
 - [x] Componente Header
-    - [x] Texto com chevron centralizado
+    - [x] Texto com chevrons centralizado
     - [x] Mostrar para o Junior
-- [ ] Componente Card
+- [x] Componente Card
     - [x] Estrutura HTML
         - [x] Imagem
         - [x] Nome
         - [x] Legenda
         - [x] Botão  clicável
     - [x] Mostrar para o Junior
-- [ ] Chamar os componentes no App
+- [ ] Componente para fazer requisição com a api
     - [x] Importação da API do Clash Royale
     - [x] Estudar os endpoints
     - [x] Fazer autenticação da API
-    - [ ] Colocar o get em uma função --> colocar um return data
-    - [ ] Fazer validação do data(em caso de undefined ou null)
-    - [ ] Rodar o map de data
-    - [ ] Passar as props para o componente
-    - [ ] Testar
-    - [ ] Mostrar para o Junior
+        - [ ] Rodar o map de data
+            - [ ] Fazer validação do data(em caso de undefined ou null)
+            - [ ] Testar com useState
+                - [ ] Mostrar para o Junior
+            - [ ] Testar com useEffect
+                - [ ] Mostrar para o Junior
+        - [ ] Passar as props para o componente Accordion
+- [ ] Chamar os componentes no App
+- [ ] Testar
+- [ ] Mostrar para o Junior
+        

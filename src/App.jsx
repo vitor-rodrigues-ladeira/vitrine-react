@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import styles from './App.module.css'
 import Header from './components/header/Header.jsx'
 import Card from './components/card/Card.jsx'
+import CardList from './components/card-list/CardList.jsx'
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
           rarity={item.rarity}
         />
         )} */}
+        <CardList/>
       </div>
     </div>
   )

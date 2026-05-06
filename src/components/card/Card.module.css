@@ -1,9 +1,10 @@
 .cardBox {
     display: flex;
     flex-direction: column;
-    height: 65vh;
+    height: 60vh;
     width: 20vw;
-    gap: 10px;
+    gap: 1vh;
+    margin-bottom: 20vh;
 }
 
 .cardBox p {
@@ -49,6 +50,6 @@
 }
 
 .btn {
-    width: 50%;
+    width: 90%;
     align-self: center;
 }

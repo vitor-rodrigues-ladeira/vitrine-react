@@ -19,17 +19,37 @@ export default function CardList() {
             })
             const data = await response.json()
             if (data) {
+                //console.log(data)
                 setContent(data)
             }
         }
 
         getCards()
-        console.log(getCards())
+        //console.log(getCards())
     }, [])
 
     return (
         <>
-            {content.length > 0 || content?.items ? (<h1>{JSON.stringify(content.items)}</h1>) : (<p>Não encontrado</p>)}
+            {content.length > 0 || content?.items ? content.items.map((item, index) =>
+                <Card
+                    key={index}
+                    img={item.iconUrls?.medium}
+                    name={item.name}
+                    elixirCount={item.elixirCost}
+                    rarity={item.rarity}
+                />
+                // item.map((item2, index) =>
+                //     //console.log(item2)
+                //     // <Card
+                //     //     key={index}
+                //     //     img={item2.iconUrls?.medium}
+                //     //     name={item2.name}
+                //     //     elixirCount={item2.elixirCost}
+                //     //     rarity={item2.rarity}
+                //     // />
+                // )
+
+            ) : (<p>Não encontrado</p>)}
         </>
     )
 }

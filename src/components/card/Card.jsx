@@ -1,7 +1,12 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import styles from './Card.module.css'
 
-export default function Card({img, name, elixirCount, rarity}) {
+export default function Card({ img, name, elixirCount, rarity }) {
+    const navigate = useNavigate()
+    const handleClick = () => {
+        navigate('/details')
+    }
     return (
         <div className={styles.cardBox}>
             <img src={img} alt="" />
@@ -13,7 +18,7 @@ export default function Card({img, name, elixirCount, rarity}) {
                 </div>
                 <span className={styles.rarity}>{rarity}</span>
             </ul>
-            <button className={styles.btn}>Veja mais</button>
+            <button className={styles.btn} onClick={handleClick}>Veja mais</button>
         </div>
     )
 }

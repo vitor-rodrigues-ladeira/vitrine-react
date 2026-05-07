@@ -10,29 +10,25 @@ export default function CardList() {
     const [loading, setLoading] = useState(true)
 
     useEffect(() => {
-        async function getCards() {
-            try {
-                const response = await fetch('/api/cards/', {
-                    method: 'GET',
-                    headers: {
-                        'Authorization': `Bearer ${token}`,
-                        'Content-Type': 'application/json'
-                    }
-                })
-                const data = await response.json()
-                if (data) {
-                    //console.log(data)
-                    setContent(data)
+        try {
+            const responseFetch = fetch('/api/cards/', {
+                method: 'GET',
+                headers: {
+                    'Authorization': `Bearer ${token}`,
+                    'Content-Type': 'application/json'
                 }
-            } catch (error) {
-                console.log('Erro na requisão', error)
-            } finally {
-                setLoading(false)
-            }
-        }
+            })
+                .then((response) => response.json())
+                .then((data) => {
+                    if (data)
+                        setContent(data)
+                })
 
-        getCards()
-        //console.log(getCards())
+        } catch (error) {
+            console.log('Erro na requisão', error)
+        } finally {
+            setLoading(false)
+        }
     }, [])
 
     if (loading) {

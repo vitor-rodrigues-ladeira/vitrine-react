@@ -27,18 +27,20 @@
 - [x] Mostrar para o Junior
         
 
-- [ ] Colocar onClick no botão do Card --> redirecionar para a página de detalhes, passando o id do card clicado
-- [ ] Criar página de detalhes do card
-    - [ ] Fazer estrutura HTML
+- [x] Colocar onClick no botão do Card --> redirecionar para a página de detalhes 
+    - [ ] Passar o id do card clicado
+- [x] Criar página de detalhes do card
+    - [x] Fazer estrutura HTML
         - Lado Esquerdo
-        - [ ] Botão de voltar
-        - [ ] Imagem
-        - [ ] Row com outras imagens, como se fosse um SKU selector
+        - [x] Botão de voltar
+        - [x] Imagem
+        - [x] Row com outras imagens, como se fosse um SKU selector
         - Lado Direito
-        - [ ] Título com nome
-        - [ ] Elixir
-        - [ ] Max level
-        - [ ] Max evolution level
+        - [x] Título com nome
+        - [x] Elixir
+        - [x] Max level
+        - [x] Max evolution level
+        - [ ] Receber e consumir dados do item
     - [ ] Testar
     - [ ] Mostrar para o Junior
 - [ ] Testar

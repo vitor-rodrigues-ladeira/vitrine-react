@@ -39,3 +39,7 @@
         - [ ] Elixir
         - [ ] Max level
         - [ ] Max evolution level
+    - [ ] Testar
+    - [ ] Mostrar para o Junior
+- [ ] Testar
+- [ ] Mostrar para o Junior

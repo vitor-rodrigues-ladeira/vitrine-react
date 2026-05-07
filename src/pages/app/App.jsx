@@ -12,9 +12,7 @@ function App() {
   return (
     <div>
       <Header />
-      <div className={styles.grid}>
         <CardList/>
-      </div>
     </div>
   )
 }

@@ -40,7 +40,7 @@ export default function CardList() {
     }
 
     return (
-        <>
+        <div className={styles.grid}>
             {content.items.map((item, index) =>
                 <Card
                     key={index}
@@ -50,6 +50,6 @@ export default function CardList() {
                     rarity={item.rarity}
                 />
             )}
-        </>
+        </div>
     )
 }

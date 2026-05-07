@@ -5,7 +5,7 @@ export default function Card({img, name, elixirCount, rarity}) {
     return (
         <div className={styles.cardBox}>
             <img src={img} alt="" />
-            <p>{name}</p>
+            <p className={styles.name}>{name}</p>
             <ul className={styles.row}>
                 <div className={styles.elixir}>
                     <img src="elixir.png" alt="" />

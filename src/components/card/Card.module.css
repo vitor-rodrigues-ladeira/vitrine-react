@@ -46,6 +46,7 @@
 .rarity{
     width: 40%;
     font-size: 20px;
+    text-align: end;
     align-self: center;
 }
 

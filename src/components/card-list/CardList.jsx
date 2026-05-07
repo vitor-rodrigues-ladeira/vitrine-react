@@ -7,26 +7,42 @@ const token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiIsImtpZCI6IjI4YTMxOGY3LTAwMDAtY
 
 export default function CardList() {
     const [content, setContent] = useState([]);
+    const [loading, setLoading] = useState(true)
+
 
     useEffect(() => {
         async function getCards() {
-            const response = await fetch('/api/cards/', {
-                method: 'GET',
-                headers: {
-                    'Authorization': `Bearer ${token}`,
-                    'Content-Type': 'application/json'
+            try {
+                const response = await fetch('/api/cards/', {
+                    method: 'GET',
+                    headers: {
+                        'Authorization': `Bearer ${token}`,
+                        'Content-Type': 'application/json'
+                    }
+                })
+                const data = await response.json()
+                if (data) {
+                    //console.log(data)
+                    setContent(data)
                 }
-            })
-            const data = await response.json()
-            if (data) {
-                //console.log(data)
-                setContent(data)
+            } catch (error){
+                console.log('Erro na requisão', error)
+            } finally {
+                setLoading(false)
             }
         }
 
         getCards()
         //console.log(getCards())
     }, [])
+
+    if(loading){
+        return (<p><strong>Carregando...</strong></p>)
+    }
+        
+    if (!content.items || content.items.lenght == 0){
+        return (<p><strong>Cartas não encontradas</strong></p>)
+    }
 
     return (
         <>
@@ -38,17 +54,6 @@ export default function CardList() {
                     elixirCount={item.elixirCost}
                     rarity={item.rarity}
                 />
-                // item.map((item2, index) =>
-                //     //console.log(item2)
-                //     // <Card
-                //     //     key={index}
-                //     //     img={item2.iconUrls?.medium}
-                //     //     name={item2.name}
-                //     //     elixirCount={item2.elixirCost}
-                //     //     rarity={item2.rarity}
-                //     // />
-                // )
-
             ) : (<p>Não encontrado</p>)}
         </>
     )

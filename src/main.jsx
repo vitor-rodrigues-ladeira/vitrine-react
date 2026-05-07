@@ -6,12 +6,12 @@ import App from './pages/app/App.jsx'
 import CardDetails from './pages/card-details/CardDetails.jsx'
 
 createRoot(document.getElementById('root')).render(
-  <StrictMode>
-    <BrowserRouter>
+  <BrowserRouter>
+    <StrictMode>
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="/details" element={<CardDetails />} />
       </Routes>
-    </BrowserRouter>
-  </StrictMode>
+    </StrictMode>
+  </BrowserRouter>
 )

@@ -12,15 +12,6 @@ function App() {
     <div>
       <Header />
       <div className={styles.grid}>
-        {/* {data == null || data == undefined ? console.log("erro") : data.items.map((item) =>
-        <Card
-          key = {item.id}
-          img={item.iconUrls.medium}
-          name={item.name}
-          elixirCount={item.elixirCost}
-          rarity={item.rarity}
-        />
-        )} */}
         <CardList/>
       </div>
     </div>

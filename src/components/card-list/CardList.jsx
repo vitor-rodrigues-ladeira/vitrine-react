@@ -9,7 +9,6 @@ export default function CardList() {
     const [content, setContent] = useState([]);
     const [loading, setLoading] = useState(true)
 
-
     useEffect(() => {
         async function getCards() {
             try {
@@ -25,7 +24,7 @@ export default function CardList() {
                     //console.log(data)
                     setContent(data)
                 }
-            } catch (error){
+            } catch (error) {
                 console.log('Erro na requisão', error)
             } finally {
                 setLoading(false)
@@ -36,11 +35,11 @@ export default function CardList() {
         //console.log(getCards())
     }, [])
 
-    if(loading){
+    if (loading) {
         return (<p><strong>Carregando...</strong></p>)
     }
-        
-    if (!content.items || content.items.lenght == 0){
+
+    if (!content.items || content.items.lenght == 0) {
         return (<p><strong>Cartas não encontradas</strong></p>)
     }
 

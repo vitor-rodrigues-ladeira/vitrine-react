@@ -11,7 +11,7 @@
         - [x] Legenda
         - [x] Botão  clicável
     - [x] Mostrar para o Junior
-- [ ] Componente para fazer requisição com a api
+- [x] Componente para fazer requisição com a api
     - [x] Importação da API do Clash Royale
     - [x] Estudar os endpoints
     - [x] Fazer autenticação da API
@@ -24,5 +24,18 @@
         - [x] Passar as props para o componente Accordion
 - [x] Chamar os componentes no App
 - [x] Testar
-- [ ] Mostrar para o Junior
+- [x] Mostrar para o Junior
         
+
+- [ ] Colocar onClick no botão do Card --> redirecionar para a página de detalhes, passando o id do card clicado
+- [ ] Criar página de detalhes do card
+    - [ ] Fazer estrutura HTML
+        - Lado Esquerdo
+        - [ ] Botão de voltar
+        - [ ] Imagem
+        - [ ] Row com outras imagens, como se fosse um SKU selector
+        - Lado Direito
+        - [ ] Título com nome
+        - [ ] Elixir
+        - [ ] Max level
+        - [ ] Max evolution level

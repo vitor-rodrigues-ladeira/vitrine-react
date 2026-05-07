@@ -4,7 +4,7 @@ import Header from '../../components/header/Header.jsx'
 import Card from '../../components/card/Card.jsx'
 import CardList from '../../components/card-list/CardList.jsx'
 
-function App() {
+export default function  App() {
   // const callGet = getCards()
   // console.log("log da funcao", callGet.items)
   return (
@@ -14,5 +14,3 @@ function App() {
     </div>
   )
 }
-
-export default App

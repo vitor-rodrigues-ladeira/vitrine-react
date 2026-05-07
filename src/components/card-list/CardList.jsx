@@ -44,6 +44,7 @@ export default function CardList() {
             {content.items.map((item, index) =>
                 <Card
                     key={index}
+                    id={item.id}
                     img={item.iconUrls?.medium}
                     name={item.name}
                     elixirCount={item.elixirCost}

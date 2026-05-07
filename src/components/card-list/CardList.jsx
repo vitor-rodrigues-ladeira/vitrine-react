@@ -35,13 +35,13 @@ export default function CardList() {
         return (<p><strong>Carregando...</strong></p>)
     }
 
-    if (!content.items || content.items.lenght == 0) {
+    if (content.length < 0 || !content?.items || content.items.lenght == 0) {
         return (<p><strong>Cartas não encontradas</strong></p>)
     }
 
     return (
         <>
-            {content.length > 0 || content?.items ? content.items.map((item, index) =>
+            {content.items.map((item, index) =>
                 <Card
                     key={index}
                     img={item.iconUrls?.medium}
@@ -49,7 +49,7 @@ export default function CardList() {
                     elixirCount={item.elixirCost}
                     rarity={item.rarity}
                 />
-            ) : (<p>Não encontrado</p>)}
+            )}
         </>
     )
 }

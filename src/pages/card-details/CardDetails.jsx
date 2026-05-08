@@ -46,11 +46,11 @@ export default function CardDetails() {
             <Header />
             <div className={styles.content}>
                 <div className={styles.col1}>
-                    <button onClick={handleClick}>Voltar</button>
+                    <button onClick={handleClick} className={styles.btn}>Voltar</button>
                     <img src={agent.data.fullPortrait} alt="" />
                 </div>
                 <div className={styles.col2}>
-                    <div>
+                    <div className={styles.row}>
                         <h1>{agent.data.displayName}</h1>
                         <ul className={styles.role}>
                             <img src={agent.data.role.displayIcon} alt="" />

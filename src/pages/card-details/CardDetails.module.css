@@ -1,17 +1,57 @@
-.content{
+.content {
     display: flex;
     flex-direction: row;
     width: 100vw;
     padding-inline: 5vw;
 }
 
-.col1, .col2{
+.col1,
+.col2 {
     display: flex;
     flex-direction: column;
 }
-.col1{
+
+.col1 {
     width: 45vw;
 }
-.col2{
+
+.col2 {
     width: 55vw;
+    color: white;
+}
+
+.col1 img {
+    width: 100%;
+}
+
+.btn {
+    width: 15%;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    gap: 2vw;
+}
+
+.row h1 {
+    font-size: 4rem;
+    font-family: "Anton", sans-serif;
+    ;
+}
+
+.role {
+    display: flex;
+    align-items: center;
+    height: 20%;
+    gap: 0.5vw;
+    font-size: 1.5rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.role img {
+    height: 80%;
+    align-self: center;
 }

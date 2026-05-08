@@ -1,4 +1,4 @@
-### Vitrine de cards - Clash Royale
+### Vitrine de cards - Valorant
 - [x] Criar repositório git
 - [x] Estruturar pastas e remoção do template padrão do react
 - [x] Componente Header
@@ -12,7 +12,8 @@
         - [x] Botão  clicável
     - [x] Mostrar para o Junior
 - [x] Componente para fazer requisição com a api
-    - [x] Importação da API do Clash Royale
+    - [x] Importação da API do Valorant
+
     - [x] Estudar os endpoints
     - [x] Fazer autenticação da API
         - [x] Testar com useState
@@ -34,14 +35,12 @@
         - Lado Esquerdo
         - [x] Botão de voltar
         - [x] Imagem
-        - [x] Row com outras imagens, como se fosse um SKU selector
-        - Lado Direito
         - [x] Título com nome
-        - [x] Elixir
-        - [x] Max level
-        - [x] Max evolution level
-        - [ ] Receber e consumir dados do item
-    - [ ] Testar
-    - [ ] Mostrar para o Junior
-- [ ] Testar
+        - [x] Classe do agente
+        - [x] Descrição
+        - [x] Habilidades
+        - [x] Receber e consumir dados do item
+    - [x] Testar
+    - [x] Mostrar para o Junior
+- [x] Testar
 - [ ] Mostrar para o Junior

@@ -7,7 +7,7 @@ export default function CardDetails() {
     const navigate = useNavigate()
     const [searchParams] = useSearchParams()
     const [loading, setLoading] = useState(true)
-    const [agent, setAgent] = useState([])
+    const [agent, setAgent] = useState(null)
     const id = searchParams.get('id')
 
     const handleClick = () => {
@@ -26,7 +26,7 @@ export default function CardDetails() {
                     setLoading(false)
                     console.log(data)
                 })
-                
+
         } catch (error) {
             console.log('Erro na requisição:', error)
             setLoading(false)
@@ -37,20 +37,39 @@ export default function CardDetails() {
         return (<p><strong>Carregando...</strong></p>)
     }
 
-    if(agent.length < 1 || !agent.data || agent.data.length === 0){
-        return(<p><strong>Agentes não encontrados</strong></p>)
+    if (agent.length < 1 || !agent.data || agent.data.length === 0) {
+        return (<p><strong>Agentes não encontrados</strong></p>)
     }
-
+    console.log(agent.data)
     return (
         <div>
             <Header />
             <div className={styles.content}>
                 <div className={styles.col1}>
                     <button onClick={handleClick}>Voltar</button>
-                    {/* <img src="" alt="" /> */}
+                    <img src={agent.data.fullPortrait} alt="" />
                 </div>
                 <div className={styles.col2}>
-                    <h1>{id}</h1>
+                    <div>
+                        <h1>{agent.data.displayName}</h1>
+                        <ul className={styles.role}>
+                            <img src={agent.data.role.displayIcon} alt="" />
+                            <span>{agent.data.role.displayName}</span>
+                        </ul>
+                    </div>
+                    <p>{agent.data.description}</p>
+                    <h2>Habilidades</h2>
+                    {agent.data?.abilities.map((item, index) => {
+                        return (
+                            <div className={styles.ability} key={index}>
+                                <ul>
+                                    <img src={item.displayIcon} alt="" />
+                                    <p>{item.displayName}</p>
+                                </ul>
+                                <p>{item.description}</p>
+                            </div>
+                        )
+                    })}
                 </div>
             </div>
         </div>

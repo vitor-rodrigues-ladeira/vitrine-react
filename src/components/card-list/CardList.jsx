@@ -20,13 +20,12 @@ export default function CardList() {
             })
                 .then((response) => response.json())
                 .then((data) => {
-                    if (data)
-                        setContent(data)
+                    setContent(data)
+                    setLoading(false)
                 })
 
         } catch (error) {
             console.log('Erro na requisão', error)
-        } finally {
             setLoading(false)
         }
     }, [])
@@ -35,7 +34,7 @@ export default function CardList() {
         return (<p><strong>Carregando...</strong></p>)
     }
     console.log(content.data)
-    if (content.length < 0 || !content?.data || content.data.lenght == 0) {
+    if (content.length < 1 || !content?.data || content.data.length === 0) {
         return (<p><strong>Agentes não encontrados</strong></p>)
     }
 

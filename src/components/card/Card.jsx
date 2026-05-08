@@ -9,7 +9,7 @@ export default function Card({ key, id, img, name, roleIcon, role}) {
     }
     return (
         <div className={styles.cardBox} key={key}>
-            <img src={img} alt="" />
+            <img src={img} alt="" className={styles.portrait}/>
             <div className={styles.row}>
                 <p className={styles.name}>{name}</p>
                 <ul className={styles.role}>

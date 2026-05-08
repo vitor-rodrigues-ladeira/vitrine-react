@@ -9,12 +9,12 @@
     border-radius: 0 0 5px 5px;
 }
 
-.cardBox img:hover {
+.portrait:hover {
     transform: scale(1.2) translateY(-15px);
     transition: 0.5s ease;
 }
 
-.cardBox img {
+.portrait {
     transition: 0.5s ease;
 }
 

@@ -37,6 +37,10 @@ export default function CardDetails() {
         return (<p><strong>Carregando...</strong></p>)
     }
 
+    if(agent.length < 1 || !agent.data || agent.data.length === 0){
+        return(<p><strong>Agentes não encontrados</strong></p>)
+    }
+
     return (
         <div>
             <Header />

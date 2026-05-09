@@ -31,7 +31,7 @@ export default function CardList() {
     }, [])
 
     if (loading) {
-        return (<p><strong>Carregando...</strong></p>)
+        return (<p className='loading'><strong>Carregando...</strong></p>)
     }
     console.log(content.data)
     if (content.length < 1 || !content?.data || content.data.length === 0) {

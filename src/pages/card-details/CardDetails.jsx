@@ -34,7 +34,7 @@ export default function CardDetails() {
     }, [])
 
     if (loading) {
-        return (<p><strong>Carregando...</strong></p>)
+        return (<p className='loading'><strong>Carregando...</strong></p>)
     }
 
     if (agent.length < 1 || !agent.data || agent.data.length === 0) {
@@ -46,7 +46,7 @@ export default function CardDetails() {
             <Header />
             <div className={styles.content}>
                 <div className={styles.col1}>
-                    <button onClick={handleClick} className={styles.btn}>Voltar</button>
+                    <button onClick={handleClick} className={styles.btn}>&larr; Voltar</button>
                     <img src={agent.data.fullPortrait} alt="" />
                 </div>
                 <div className={styles.col2}>

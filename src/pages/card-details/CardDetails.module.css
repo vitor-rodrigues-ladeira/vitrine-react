@@ -17,6 +17,7 @@
 
 .col2 {
     width: 55vw;
+    padding-top: 2vh;
     color: white;
 }
 
@@ -36,7 +37,7 @@
     cursor: pointer;
 }
 
-.btn:hover{
+.btn:hover {
     transform: scale(1.02);
     transition: 0.5s ease;
 }
@@ -66,4 +67,12 @@
 .role img {
     height: 80%;
     align-self: center;
+}
+
+.desc {
+    font-size: 1.3rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: justify;
+    text-justify:auto;
+    margin-bottom: 5vh;
 }

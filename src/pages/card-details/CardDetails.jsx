@@ -57,7 +57,7 @@ export default function CardDetails() {
                             <span>{agent.data.role.displayName}</span>
                         </ul>
                     </div>
-                    <p>{agent.data.description}</p>
+                    <p className={styles.desc}>{agent.data.description}</p>
                     <h2>Habilidades</h2>
                     {agent.data?.abilities.map((item, index) => {
                         return (

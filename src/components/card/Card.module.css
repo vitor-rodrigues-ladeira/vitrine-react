@@ -10,7 +10,7 @@
 }
 
 .portrait:hover {
-    transform: scale(1.2) translateY(-15px);
+    transform: scale(1.1) translateY(-10px);
     transition: 0.5s ease;
 }
 

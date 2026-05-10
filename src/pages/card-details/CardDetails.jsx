@@ -59,17 +59,21 @@ export default function CardDetails() {
                     </div>
                     <p className={styles.desc}>{agent.data.description}</p>
                     <h2>Habilidades</h2>
-                    {agent.data?.abilities.map((item, index) => {
-                        return (
-                            <div className={styles.ability} key={index}>
-                                <ul>
-                                    <img src={item.displayIcon} alt="" />
-                                    <p>{item.displayName}</p>
-                                </ul>
-                                <p>{item.description}</p>
-                            </div>
-                        )
-                    })}
+                    <div className={styles.abilities}>
+                        {agent.data?.abilities.map((item, index) => {
+                            return (
+                                <details key={index} className={styles.ability}>
+                                    <summary className={styles.abltName}>
+                                        <img src={item.displayIcon} alt="" />
+                                        <p>{item.displayName}</p>
+                                    </summary>
+                                    <p className={styles.abltDesc}>
+                                        {item.description}
+                                    </p>
+                                </details>
+                            )
+                        })}
+                    </div>
                 </div>
             </div>
         </div>

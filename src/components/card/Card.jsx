@@ -17,7 +17,7 @@ export default function Card({ key, id, img, name, roleIcon, role}) {
                     <span>{role}</span>
                 </ul>
             </div>
-            <button className={styles.btn} onClick={handleClick}>Veja mais</button>
+            <button className={styles.btn} onClick={handleClick}>Detalhes</button>
         </div>
     )
 }

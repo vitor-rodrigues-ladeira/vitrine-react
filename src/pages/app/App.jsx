@@ -1,6 +1,7 @@
 import React from 'react'
 import styles from './App.module.css'
 import Header from '../../components/header/Header.jsx'
+import Footer from '../../components/footer/Footer.jsx'
 import CardList from '../../components/card-list/CardList.jsx'
 
 export default function  App() {
@@ -8,6 +9,7 @@ export default function  App() {
     <div>
       <Header />
       <CardList />
+      <Footer/>
     </div>
   )
 }

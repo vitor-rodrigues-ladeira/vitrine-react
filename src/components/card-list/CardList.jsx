@@ -11,7 +11,7 @@ export default function CardList() {
 
     useEffect(() => {
         try {
-            const responseFetch = fetch('https://valorant-api.com/v1/agents', {
+            const responseFetch = fetch('https://valorant-api.com/v1/agents?language=pt-BR', {
                 method: 'GET',
                 headers: {
                     //'Authorization': `Bearer ${token}`,

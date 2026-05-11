@@ -16,7 +16,7 @@ export default function CardDetails() {
 
     useEffect(() => {
         try {
-            const responseFetch = fetch(`https://valorant-api.com/v1/agents/${id}`, {
+            const responseFetch = fetch(`https://valorant-api.com/v1/agents/${id}?language=pt-BR`, {
                 method: 'GET',
                 headers: { 'Content-Type': 'application/json' }
             })

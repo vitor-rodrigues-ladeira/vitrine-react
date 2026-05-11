@@ -47,9 +47,9 @@
     - [x] Componente footer
         - [x] Meu nome + nickname github
         - [x] Mostrar para o Junior
-    - [ ] Componente sidebar de filtro
-        - [ ] Filtros disponíveis: função[Iniciador, Sentinela, Duelista, Controlador], foto virada para a direita, disponível para teste
-            - [ ] Checkbox -> texto
+    - [x] Componente sidebar de filtro
+        - [x] Filtros disponíveis: função[Iniciador, Sentinela, Duelista, Controlador], foto virada para a direita, disponível para teste
+            - [x] Checkbox -> texto
             - [ ] Mostrar para o Junior
 - [ ] Limite de exibição(20x)
     - [ ] Limitar para que apareçam só 20 agentes na vitrine

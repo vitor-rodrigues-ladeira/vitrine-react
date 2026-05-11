@@ -7,8 +7,12 @@ import Card from '../card/Card.jsx'
 
 export default function CardList() {
     const [content, setContent] = useState([]);
+    const [render, setRender] = useState(20)
     const [loading, setLoading] = useState(true)
 
+    const renderMore = () => {
+        setRender(render + 20)
+    }
     useEffect(() => {
         try {
             const responseFetch = fetch('https://valorant-api.com/v1/agents?language=pt-BR', {
@@ -39,16 +43,22 @@ export default function CardList() {
     }
 
     return (
-        <div className={styles.grid}>
-            {content.data.map((item, index) =>
-                <Card
-                    key={index}
-                    id={item.uuid}
-                    img={item.fullPortrait}
-                    name={item.displayName}
-                    role={item.role?.displayName}
-                    roleIcon={item.role?.displayIcon}
-                />
+        <div className={styles.list}>
+            <div className={styles.grid}>
+                {content.data.slice(0, render).map((item, index) =>
+                    <Card
+                        key={index}
+                        id={item.uuid}
+                        img={item.fullPortrait}
+                        name={item.displayName}
+                        role={item.role?.displayName}
+                        roleIcon={item.role?.displayIcon}
+                    />
+                )}
+
+            </div>
+            {render < content.data.length && (
+                <button onClick={renderMore} className={styles.btn}>Ver mais</button>
             )}
         </div>
     )

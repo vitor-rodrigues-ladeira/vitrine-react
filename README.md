@@ -51,10 +51,10 @@
         - [x] Filtros disponíveis: função[Iniciador, Sentinela, Duelista, Controlador], foto virada para a direita, disponível para teste
             - [x] Checkbox -> texto
             - [ ] Mostrar para o Junior
-- [ ] Limite de exibição(20x)
-    - [ ] Limitar para que apareçam só 20 agentes na vitrine
-    - [ ] Ao chegar no final dos 20 --> botão de 'Ver Mais'
-    - [ ] Renderizar o resto dos agentes
+- [x] Limite de exibição(20x)
+    - [x] Limitar para que apareçam só 20 agentes na vitrine
+    - [x] Ao chegar no final dos 20 --> botão de 'Ver Mais'
+    - [x] Renderizar o resto dos agentes
     - [ ] Quando chegar ao final --> span: Não há mais personagens
     - [ ] Testar
     - [ ] Mostrar para o Junior

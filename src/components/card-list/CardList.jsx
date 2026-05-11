@@ -6,12 +6,13 @@ import Card from '../card/Card.jsx'
 
 
 export default function CardList() {
+    const renderCount = 6
     const [content, setContent] = useState([]);
-    const [render, setRender] = useState(20)
+    const [render, setRender] = useState(renderCount)
     const [loading, setLoading] = useState(true)
 
     const renderMore = () => {
-        setRender(render + 20)
+        setRender(render + renderCount)
     }
     useEffect(() => {
         try {

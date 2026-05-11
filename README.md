@@ -50,18 +50,18 @@
     - [ ] Componente sidebar de filtro
         - [ ] Filtros disponíveis: função[Iniciador, Sentinela, Duelista, Controlador], foto virada para a direita, disponível para teste
             - [ ] Checkbox -> texto
-            - [] Mostrar para o Junior
+            - [ ] Mostrar para o Junior
 - [ ]Limite de exibição(20x)
     - [ ] Limitar para que apareçam só 20 agentes na vitrine
     - [ ] Ao chegar no final dos 20 --> botão de 'Ver Mais'
     - [ ] Renderizar o resto dos agentes
     - [ ] Quando chegar ao final --> span: Não há mais personagens
-    - [] Testar
-    - [] Mostrar para o Junior
+    - [ ] Testar
+    - [ ] Mostrar para o Junior
 - [ ] Filtro
-    - [] Lógica do filtro
-    - [] Testar
-    - [] Mostrar para o Junior
-- [] Ordenação por ordem alfabética (nome)
-    - [] Testar
-    - [] Mostrar para o Junior
+    - [ ] Lógica do filtro
+    - [ ] Testar
+    - [ ] Mostrar para o Junior
+- [ ] Ordenação por ordem alfabética (nome)
+    - [ ] Testar
+    - [ ] Mostrar para o Junior

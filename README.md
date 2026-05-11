@@ -43,10 +43,10 @@
 - [x] Mostrar para o Junior
 
 #### Filtro e paginação
-- [] Layout
+- [ ] Layout
     - [ ] Componente footer
         - [ ] Meu nome + nickname github
-        - [] Mostrar para o Junior
+        - [ ] Mostrar para o Junior
     - [ ] Componente sidebar de filtro
         - [ ] Filtros disponíveis: função[Iniciador, Sentinela, Duelista, Controlador], foto virada para a direita, disponível para teste
             - [ ] Checkbox -> texto

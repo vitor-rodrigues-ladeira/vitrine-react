@@ -8,7 +8,7 @@ export default function Card({ key, id, img, name, roleIcon, role}) {
         navigate(`/details?id=${id}`)
     }
     return (
-        <div className={styles.cardBox} key={key}>
+        <div className={`${styles.cardBox} animation`} key={key}>
             <img src={img} alt="" className={styles.portrait}/>
             <div className={styles.row}>
                 <p className={styles.name}>{name}</p>

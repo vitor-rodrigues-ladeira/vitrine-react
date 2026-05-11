@@ -44,7 +44,7 @@ export default function CardDetails() {
     return (
         <div>
             <Header />
-            <div className={styles.content}>
+            <div className={`${styles.content} animation`}>
                 <div className={styles.col1}>
                     <button onClick={handleClick} className={styles.btn}>&larr; Voltar</button>
                     <img src={agent.data?.fullPortrait} alt="" />

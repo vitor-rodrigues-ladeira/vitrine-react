@@ -43,4 +43,4 @@
     - [x] Testar
     - [x] Mostrar para o Junior
 - [x] Testar
-- [ ] Mostrar para o Junior
+- [x] Mostrar para o Junior

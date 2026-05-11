@@ -17,6 +17,7 @@
 
 .col2 {
     width: 55vw;
+    padding-top: 2vh;
     color: white;
 }
 
@@ -26,6 +27,19 @@
 
 .btn {
     width: 15%;
+    border: none;
+    border-radius: 2px;
+    background-color: black;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 700;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    transform: scale(1.02);
+    transition: 0.5s ease;
 }
 
 .row {
@@ -39,7 +53,6 @@
 .row h1 {
     font-size: 4rem;
     font-family: "Anton", sans-serif;
-    ;
 }
 
 .role {
@@ -54,4 +67,51 @@
 .role img {
     height: 80%;
     align-self: center;
+}
+
+.desc {
+    font-size: 1.3rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: justify;
+    text-justify: auto;
+    margin-bottom: 2vh;
+}
+
+.col2 h2 {
+    margin-bottom: 1.5vh;
+}
+
+.abilities {
+    /* background-color: red;
+    border: 2px blue dotted; */
+    width: 100%;
+    gap: 20px;
+}
+
+
+.ability {
+    margin: 5px;
+}
+
+.abltName {
+    display: flex;
+    flex-direction: row;
+    background: linear-gradient(to left, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.037));
+    border-radius: 25px;
+    height: 7vh;
+    width: fit-content;
+    padding: 1vh 0.5vw;
+    gap: 1vw;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.abltName img {
+    height: 90%;
+}
+
+.abltDesc {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 0.8rem;
 }

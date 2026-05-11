@@ -5,3 +5,12 @@ body {
     background-attachment: fixed;
     background-position: center;
 }
+
+.loading{
+    display: flex;
+    width: 100vw;
+    font-size: 20px;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}

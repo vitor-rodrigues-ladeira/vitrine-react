@@ -16,7 +16,7 @@ export default function CardDetails() {
 
     useEffect(() => {
         try {
-            const responseFetch = fetch(`https://valorant-api.com/v1/agents/${id}`, {
+            const responseFetch = fetch(`https://valorant-api.com/v1/agents/${id}?language=pt-BR`, {
                 method: 'GET',
                 headers: { 'Content-Type': 'application/json' }
             })
@@ -34,10 +34,10 @@ export default function CardDetails() {
     }, [])
 
     if (loading) {
-        return (<p><strong>Carregando...</strong></p>)
+        return (<p className='loading'><strong>Carregando...</strong></p>)
     }
 
-    if (agent.length < 1 || !agent.data || agent.data.length === 0) {
+    if (agent.length < 1 || !agent?.data || agent?.data.length === 0) {
         return (<p><strong>Agentes não encontrados</strong></p>)
     }
     console.log(agent.data)
@@ -46,30 +46,34 @@ export default function CardDetails() {
             <Header />
             <div className={styles.content}>
                 <div className={styles.col1}>
-                    <button onClick={handleClick} className={styles.btn}>Voltar</button>
-                    <img src={agent.data.fullPortrait} alt="" />
+                    <button onClick={handleClick} className={styles.btn}>&larr; Voltar</button>
+                    <img src={agent.data?.fullPortrait} alt="" />
                 </div>
                 <div className={styles.col2}>
                     <div className={styles.row}>
-                        <h1>{agent.data.displayName}</h1>
+                        <h1>{agent.data?.displayName}</h1>
                         <ul className={styles.role}>
-                            <img src={agent.data.role.displayIcon} alt="" />
-                            <span>{agent.data.role.displayName}</span>
+                            <img src={agent.data?.role?.displayIcon} alt="" />
+                            <span>{agent.data?.role?.displayName}</span>
                         </ul>
                     </div>
-                    <p>{agent.data.description}</p>
+                    <p className={styles.desc}>{agent.data?.description}</p>
                     <h2>Habilidades</h2>
-                    {agent.data?.abilities.map((item, index) => {
-                        return (
-                            <div className={styles.ability} key={index}>
-                                <ul>
-                                    <img src={item.displayIcon} alt="" />
-                                    <p>{item.displayName}</p>
-                                </ul>
-                                <p>{item.description}</p>
-                            </div>
-                        )
-                    })}
+                    <div className={styles.abilities}>
+                        {agent.data?.abilities.map((item, index) => {
+                            return (
+                                <details key={index} className={styles.ability}>
+                                    <summary className={styles.abltName}>
+                                        <img src={item?.displayIcon} alt="" />
+                                        <p>{item?.displayName}</p>
+                                    </summary>
+                                    <p className={styles.abltDesc}>
+                                        {item?.description}
+                                    </p>
+                                </details>
+                            )
+                        })}
+                    </div>
                 </div>
             </div>
         </div>

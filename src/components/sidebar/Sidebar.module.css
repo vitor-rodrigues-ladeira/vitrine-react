@@ -41,4 +41,9 @@
     gap: 1.3vh;
 }
 
-hr {}
+hr {
+    height: 0.3vh;
+    background-color: rgba(255, 255, 255, 0.087);
+    border: none;
+    border-radius: 2px;
+}

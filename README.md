@@ -65,3 +65,5 @@
 - [ ] Ordenação por ordem alfabética (nome)
     - [ ] Testar
     - [ ] Mostrar para o Junior
+- [ ] Mudar todo o css para Tailwind
+    - [ ] Importação tailwind

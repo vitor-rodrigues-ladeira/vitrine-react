@@ -1,0 +1,44 @@
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    width: 150vw;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    padding-inline: 2vw;
+    padding-top: 3vh;
+    gap: 2vh;
+    background: linear-gradient(to right, rgba(65, 108, 151, 0.374), rgba(41, 67, 93, 0.571));
+    border-radius: 0 10px 0 0 ;
+    color: white;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5vh;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    width: 13vw;
+    gap: 0.5vw;
+    cursor: pointer;
+}
+
+.row input {
+    width: 10%;
+}
+
+.row label {
+    width: 90%;
+}
+
+.roles {
+    display: flex;
+    flex-direction: column;
+    gap: 1.3vh;
+}
+
+hr {}

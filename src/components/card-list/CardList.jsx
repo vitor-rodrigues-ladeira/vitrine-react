@@ -38,7 +38,7 @@ export default function CardList() {
     if (loading) {
         return (<p className='loading'><strong>Carregando...</strong></p>)
     }
-    console.log(content.data)
+    //console.log(content.data)
     if (content.length < 1 || !content?.data || content.data.length === 0) {
         return (<p><strong>Agentes não encontrados</strong></p>)
     }

@@ -1,6 +1,37 @@
 import React from 'react'
 import styles from './Sidebar.module.css'
 
+const paramsFilter = [
+    {
+        "value": "role",
+        "name": "Iniciador"
+    },
+    {
+        "value": "role",
+        "name": "Controlador"
+    },
+    {
+        "value": "role",
+        "name": "Duelista"
+    },
+    {
+        "value": "role",
+        "name": "Sentinela"
+    },
+    {
+        "value": "facing-right",
+        "name": "Virado para a direita"
+    },
+    {
+        "value": "test",
+        "name": "Disponível para teste"
+    },
+    {
+        "value": "playable",
+        "name": "Personagem jogável"
+    }
+]
+
 export default function Sidebar() {
     return (
         <aside className={styles.sidebar}>
@@ -9,27 +40,33 @@ export default function Sidebar() {
                 <hr />
                 <div className={styles.roles}>
                     <span>Função</span>
-                    <div className={styles.row}>
-                        <input type="checkbox" name='role' value='iniciador' />
-                        <label for='iniciador'>Iniciador</label>
-                    </div>
-                    <div className={styles.row}>
-                        <input type="checkbox" name='role' value='duelista' />
-                        <label for='duelista'>Duelista</label>
-                    </div>
-                    <div className={styles.row}>
-                        <input type="checkbox" name='role' value='sentinela' />
-                        <label for='sentinela'>Sentinela</label>
-                    </div>
-                    <div className={styles.row}>
-                        <input type="checkbox" name='role' value='controlador' />
-                        <label for='controlador'>Controlador</label>
-                    </div>
+                    {paramsFilter.filter(item => item.value === 'role').map((item, index) => (
+                        <div className={styles.row} key={index}>
+                            <input
+                                type="checkbox"
+                                id={item.name}
+                                name='role'
+                                value={item.name}
+                            />
+                            <label htmlFor={item.name}>{item.name}</label>
+                        </div>
+                    ))
+                    }
                 </div>
                 <hr />
-                <div className={styles.row}>
-                    <input type="checkbox" name='test' value='test' />
-                    <label for='test'>Disponível para teste</label>
+                <div className={styles.filters}>
+                    {paramsFilter.filter(item => item.value !== 'role').map((item, index) => (
+                        <div className={styles.row} key={index}>
+                            <input
+                                type="checkbox"
+                                id={item.name}
+                                name='role'
+                                value={item.name}
+                            />
+                            <label htmlFor={item.name}>{item.name}</label>
+                        </div>
+                    ))
+                    }
                 </div>
             </form>
         </aside>

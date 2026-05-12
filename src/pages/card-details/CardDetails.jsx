@@ -24,7 +24,7 @@ export default function CardDetails() {
                 .then((data) => {
                     setAgent(data)
                     setLoading(false)
-                    console.log(data)
+                    //console.log(data)
                 })
 
         } catch (error) {
@@ -40,7 +40,7 @@ export default function CardDetails() {
     if (agent.length < 1 || !agent?.data || agent?.data.length === 0) {
         return (<p><strong>Agentes não encontrados</strong></p>)
     }
-    console.log(agent.data)
+    //(agent.data)
     return (
         <div>
             <Header />

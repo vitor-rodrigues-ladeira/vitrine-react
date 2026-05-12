@@ -58,12 +58,9 @@ export default function CardList() {
                 )}
 
             </div>
-            {render < content.data.length && (
+            {render < content.data.length ? (
                 <button onClick={renderMore} className={styles.btn}>Ver mais</button>
-            )}
-            {render > content.data.length && (
-                <p className={styles.msgRender}>Todos os agentes foram carregados</p>
-            )}
+            ) : <p className={styles.msgRender}>Todos os agentes foram carregados</p>}
         </div>
     )
 }

@@ -8,7 +8,7 @@ export default function CardDetails() {
     const [searchParams] = useSearchParams()
     const [loading, setLoading] = useState(true)
     const [agent, setAgent] = useState(null)
-    const id = searchParams.get('id')
+    const uuid = searchParams.get('uuid')
 
     const handleClick = () => {
         navigate('/')
@@ -16,7 +16,7 @@ export default function CardDetails() {
 
     useEffect(() => {
         try {
-            const responseFetch = fetch(`https://valorant-api.com/v1/agents/${id}?language=pt-BR`, {
+            const responseFetch = fetch(`https://valorant-api.com/v1/agents/${uuid}?language=pt-BR`, {
                 method: 'GET',
                 headers: { 'Content-Type': 'application/json' }
             })

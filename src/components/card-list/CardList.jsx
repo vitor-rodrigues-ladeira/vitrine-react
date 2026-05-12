@@ -49,7 +49,7 @@ export default function CardList() {
                 {content.data.slice(0, render).map((item, index) =>
                     <Card
                         key={index}
-                        id={item.uuid}
+                        uuid={item.uuid}
                         img={item.fullPortrait}
                         name={item.displayName}
                         role={item.role?.displayName}

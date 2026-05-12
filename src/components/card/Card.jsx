@@ -2,10 +2,10 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import styles from './Card.module.css'
 
-export default function Card({ key, id, img, name, roleIcon, role}) {
+export default function Card({ key, uuid, img, name, roleIcon, role}) {
     const navigate = useNavigate()
     const handleClick = () => {
-        navigate(`/details?id=${id}`)
+        navigate(`/details?uuid=${uuid}`)
     }
     return (
         <div className={`${styles.cardBox} animation`} key={key}>

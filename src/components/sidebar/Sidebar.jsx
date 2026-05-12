@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styles from './Sidebar.module.css'
 
 const paramsFilter = [
@@ -33,6 +33,24 @@ const paramsFilter = [
 ]
 
 export default function Sidebar() {
+    const [selectedFilter, setSelectedFilter] = useState([])
+    //const [isChecked, setIsChecked] = useState(false)
+    // const checkHandler = () => {
+    //     setIsChecked(!isChecked)
+    // }
+    // console.log(isChecked)
+
+    const handleCheckBox = (e) => {
+        const checked = e.target.checked
+        const value = e.target.value
+        if (checked) {
+            setSelectedFilter([...selectedFilter, value])
+        } else {
+            setSelectedFilter(selectedFilter.filter((item) => item !== value))
+        }
+    }
+
+    console.log(selectedFilter)
     return (
         <aside className={styles.sidebar}>
             <h3>Filtro</h3>
@@ -47,6 +65,8 @@ export default function Sidebar() {
                                 id={item.name}
                                 name='role'
                                 value={item.name}
+                                //checked={isChecked}
+                                onChange={handleCheckBox}
                             />
                             <label htmlFor={item.name}>{item.name}</label>
                         </div>
@@ -60,8 +80,9 @@ export default function Sidebar() {
                             <input
                                 type="checkbox"
                                 id={item.name}
-                                name='role'
+                                name={item.name.toLowerCase()}
                                 value={item.name}
+                                onChange={handleCheckBox}
                             />
                             <label htmlFor={item.name}>{item.name}</label>
                         </div>

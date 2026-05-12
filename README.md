@@ -60,7 +60,8 @@
     - [x] Mostrar para o Junior
 - [ ] Filtro
     - [ ] Lógica do filtro
-        - [ ] Ao selecionar um ou mais filtros -> caso filtro esteja selecionado -> nomes são armazenados em uma lista
+        - [x] Ao selecionar um ou mais filtros -> caso filtro esteja selecionado -> nomes são armazenados em uma lista
+        - [ ] Mudar array de categorias de filtro para especificar os values
     - [ ] Testar
     - [ ] Mostrar para o Junior
 - [ ] Ordenação por ordem alfabética (nome)

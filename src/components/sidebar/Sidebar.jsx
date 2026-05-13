@@ -24,20 +24,9 @@ const paramsFilter = [
     }
 ]
 
-export default function Sidebar() {
-    const [selectedFilter, setSelectedFilter] = useState([])
+export default function Sidebar({selectedFilter, handleCheckBox}) {
 
-    const handleCheckBox = (e) => {
-        const checked = e.target.checked
-        const value = e.target.value
-        if (checked) {
-            setSelectedFilter([...selectedFilter, value])
-        } else {
-            setSelectedFilter(selectedFilter.filter((item) => item !== value))
-        }
-    }
-
-    console.log(selectedFilter)
+    //console.log(selectedFilter)
     return (
         <aside className={styles.sidebar}>
             <h3>Filtro</h3>

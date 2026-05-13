@@ -3,31 +3,22 @@ import styles from './Sidebar.module.css'
 
 const paramsFilter = [
     {
-        "value": "role",
-        "name": "Iniciador"
+        "field": "role",
+        "value": ["Iniciador", "Controlador", "Duelista", "Sentinela"],
     },
     {
-        "value": "role",
-        "name": "Controlador"
+        "field": "isFullPortraitRightFacing",
+        "value": [],
+        "name": "Virado para direita"
     },
     {
-        "value": "role",
-        "name": "Duelista"
-    },
-    {
-        "value": "role",
-        "name": "Sentinela"
-    },
-    {
-        "value": "facing-right",
-        "name": "Virado para a direita"
-    },
-    {
-        "value": "test",
+        "field": "isAvailableForTest",
+        "value": [],
         "name": "Disponível para teste"
     },
     {
-        "value": "playable",
+        "field": "isPlayableCharacter",
+        "value": [],
         "name": "Personagem jogável"
     }
 ]

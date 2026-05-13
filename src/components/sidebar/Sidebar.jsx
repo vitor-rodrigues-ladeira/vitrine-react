@@ -25,11 +25,6 @@ const paramsFilter = [
 
 export default function Sidebar() {
     const [selectedFilter, setSelectedFilter] = useState([])
-    //const [isChecked, setIsChecked] = useState(false)
-    // const checkHandler = () => {
-    //     setIsChecked(!isChecked)
-    // }
-    // console.log(isChecked)
 
     const handleCheckBox = (e) => {
         const checked = e.target.checked
@@ -49,37 +44,38 @@ export default function Sidebar() {
                 <hr />
                 <div className={styles.roles}>
                     <span>Função</span>
-                    {paramsFilter.filter(item => item.value === 'role').map((item, index) => (
-                        <div className={styles.row} key={index}>
-                            <input
-                                type="checkbox"
-                                id={item.name}
-                                name='role'
-                                value={item.name}
-                                //checked={isChecked}
-                                onChange={handleCheckBox}
-                            />
-                            <label htmlFor={item.name}>{item.name}</label>
-                        </div>
-                    ))
-                    }
+                    {paramsFilter.map((item) => (
+                        item.field === 'role' && (
+                            item.value.map((i, idx) =>
+                                <div className={styles.row} key={idx}>
+                                    <input
+                                        type="checkbox"
+                                        id={i}
+                                        name="role"
+                                        value={i}
+                                        onChange={handleCheckBox}
+                                    />
+                                    <label htmlFor={i}>{i}</label>
+                                </div>
+                            )
+                        )
+                    ))}
                 </div>
                 <hr />
-                <div className={styles.filters}>
-                    {paramsFilter.filter(item => item.value !== 'role').map((item, index) => (
+                {paramsFilter.map((item, index) =>
+                    item.name && (
                         <div className={styles.row} key={index}>
                             <input
                                 type="checkbox"
-                                id={item.name}
-                                name={item.name.toLowerCase()}
-                                value={item.name}
+                                id={item.field}
+                                name={item.field.toLowerCase()}
+                                value={item.field}
                                 onChange={handleCheckBox}
                             />
-                            <label htmlFor={item.name}>{item.name}</label>
+                            <label htmlFor={item.field}>{item.name}</label>
                         </div>
-                    ))
-                    }
-                </div>
+                    )
+                )}
             </form>
         </aside>
     )

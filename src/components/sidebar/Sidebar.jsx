@@ -5,20 +5,21 @@ const paramsFilter = [
     {
         "field": "role",
         "value": ["Iniciador", "Controlador", "Duelista", "Sentinela"],
+        "name": "Função"
     },
     {
         "field": "isFullPortraitRightFacing",
-        "value": [],
+        "value": [true],
         "name": "Virado para direita"
     },
     {
         "field": "isAvailableForTest",
-        "value": [],
+        "value": [true],
         "name": "Disponível para teste"
     },
     {
         "field": "isPlayableCharacter",
-        "value": [],
+        "value": [true],
         "name": "Personagem jogável"
     }
 ]
@@ -42,40 +43,26 @@ export default function Sidebar() {
             <h3>Filtro</h3>
             <form className={styles.form}>
                 <hr />
-                <div className={styles.roles}>
-                    <span>Função</span>
-                    {paramsFilter.map((item) => (
-                        item.field === 'role' && (
-                            item.value.map((i, idx) =>
-                                <div className={styles.row} key={idx}>
-                                    <input
-                                        type="checkbox"
-                                        id={i}
-                                        name="role"
-                                        value={i}
-                                        onChange={handleCheckBox}
-                                    />
-                                    <label htmlFor={i}>{i}</label>
-                                </div>
-                            )
-                        )
-                    ))}
-                </div>
-                <hr />
-                {paramsFilter.map((item, index) =>
-                    item.name && (
-                        <div className={styles.row} key={index}>
-                            <input
-                                type="checkbox"
-                                id={item.field}
-                                name={item.field.toLowerCase()}
-                                value={item.field}
-                                onChange={handleCheckBox}
-                            />
-                            <label htmlFor={item.field}>{item.name}</label>
-                        </div>
-                    )
-                )}
+
+                {paramsFilter.map((item, index) => (
+                    <div key={index} data-field={item.field} className={styles.roles} style={{borderBottom: '1px solid'}}>
+                        <span>{item.value.length > 1 ? item.name : ''}</span>
+                        {item.value.map((i, idx) =>
+                            <div className={styles.row} key={idx}>
+                                <input
+                                    type="checkbox"
+                                    id={`${item.field}::${i}`}
+                                    name={item.field}
+                                    value={`${item.field}::${i}`}
+                                    onChange={handleCheckBox}
+                                />
+                                <label htmlFor={`${item.field}::${i}`}>
+                                    {item.value.length > 1 ? i : item.name}
+                                </label>
+                            </div>
+                        )}
+                    </div>
+                ))}
             </form>
         </aside>
     )

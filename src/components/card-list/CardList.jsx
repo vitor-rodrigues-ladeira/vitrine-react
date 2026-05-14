@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import styles from './CardList.module.css'
 import Card from '../card/Card.jsx'
+import { data } from 'react-router-dom';
 
 //const token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiIsImtpZCI6IjI4YTMxOGY3LTAwMDAtYTFlYi03ZmExLTJjNzQzM2M2Y2NhNSJ9.eyJpc3MiOiJzdXBlcmNlbGwiLCJhdWQiOiJzdXBlcmNlbGw6Z2FtZWFwaSIsImp0aSI6IjVhYWNhZWZhLTJjMzEtNGI0OC1hZTc3LThmZWY1NTNlODZmMiIsImlhdCI6MTc3Nzk5NjM3OSwic3ViIjoiZGV2ZWxvcGVyLzk3YjYwOTIwLTM4MzAtN2IwYi02M2QxLTA4MjQ5NTM0YzRhZSIsInNjb3BlcyI6WyJyb3lhbGUiXSwibGltaXRzIjpbeyJ0aWVyIjoiZGV2ZWxvcGVyL3NpbHZlciIsInR5cGUiOiJ0aHJvdHRsaW5nIn0seyJjaWRycyI6WyIyMDEuNjMuMTM0LjQyIiwiMTc3LjEzOS4yNDUuMTE2Il0sInR5cGUiOiJjbGllbnQifV19.3Ppf314m57pbNSXISQGVVPqBgjKOFF2DQD2nJxmlXCeNlrtpmGbcKMJwvxEmSTQyiLfb_9s6kB9S4mhYlRbeCg";
 
 
-export default function CardList({selectedFilter}) {
+export default function CardList({ selectedFilter }) {
     const renderCount = 6
     const [content, setContent] = useState([]);
     const [render, setRender] = useState(renderCount)
@@ -35,7 +36,27 @@ export default function CardList({selectedFilter}) {
         }
     }, [])
 
-    
+    const convertType = (value) => {
+        if(value === "true"){
+            return true
+        } else{
+            return false
+        }
+    }
+
+    const filters = selectedFilter.map((item) => {
+        const [field, value] = item.split('::')
+        console.log(field, value)
+        const filteredList = content.data.filter(agent => {
+            return agent[field] === convertType(value)
+        })
+        console.log("lista filtrada", filteredList, field)
+        console.log(content.data)
+    })
+
+    // const filteredList = content.data.filter(agent => {
+    //     return agent.isFullPortraitRightFacing === true
+    // })
 
     if (loading) {
         return (<p className='loading'><strong>Carregando...</strong></p>)
